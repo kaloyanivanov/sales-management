@@ -1,0 +1,23 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 style="margin-left: 10px ;">Enter information about product, which you want to add.</h3>
+<form id=add>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Id</mat-label>
+     <input  id=id matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Type</mat-label>
+     <input  id=type matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Price</mat-label>
+     <input  id=price matInput required>
+ </mat-form-field><br>
+ <mat-checkbox color="warn" (change)= "toggleSelection($event)" style="margin-left: 10px ;">Available</mat-checkbox><br>
+ <mat-form-field class={{quantiyClass}} style="margin-left: 10px ;">
+     <mat-label >Quantity</mat-label>
+     <input id=quantity matInput required>
+ </mat-form-field><br>
+ <button class="button" (click)="addProduct($event)" mat-raised-button>Add</button>
+</form>

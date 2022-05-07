@@ -1,0 +1,29 @@
+<h1 class={{colour}}>{{message}}</h1>
+<h3 style="margin-left: 10px ;">Enter custumer and product id, of sale which you want to add.</h3>
+<form id=add>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Id</mat-label>
+        <input id=sale_id matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Client</mat-label>
+        <input id=customer matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Date</mat-label>
+        <input id=date matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Sum</mat-label>
+        <input id=sum matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Product Id</mat-label>
+        <input id=product_id matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Quantity Sold</mat-label>
+        <input id=quantity matInput required>
+    </mat-form-field><br>
+    <button class="button" (click)="addSale($event)" mat-raised-button>Add</button>
+   </form>

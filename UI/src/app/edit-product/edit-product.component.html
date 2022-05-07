@@ -1,0 +1,31 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+   <h3 [hidden]="loaded" style="margin-left: 10px ;">Enter id of product, which you want to edit.</h3>
+   <form id=load [hidden]="loaded">  
+    <mat-form-field style="margin-left: 10px ;">
+    <mat-label>Id</mat-label>
+    <input id=id matInput required>
+    </mat-form-field>
+    <button class="button" (click)="getProduct($event)" mat-raised-button>Submit</button>
+    </form>
+
+    <form [hidden]="!loaded" id=update>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Id</mat-label>
+            <input  id=id  value={{product.id}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Type</mat-label>
+            <input  id=type value={{product.type}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Price</mat-label>
+            <input  id=price  value={{product.price}} matInput required>
+        </mat-form-field><br>
+        <mat-checkbox color="warn" [checked]=checked (change)= "toggleSelection($event)" style="margin-left: 10px ;">Available</mat-checkbox><br>
+        <mat-form-field class={{quantiyClass}} style="margin-left: 10px ;">
+            <mat-label >Quantity</mat-label>
+            <input id=quantity value={{product.quantity}} matInput required>
+        </mat-form-field><br>
+        <button class="button"  (click)="editProduct($event)" mat-raised-button>Edit</button>
+       </form>

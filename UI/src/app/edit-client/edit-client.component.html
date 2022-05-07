@@ -1,0 +1,30 @@
+   <br>
+   <h1 class={{colour}}>{{message}}</h1>
+   <h3 [hidden]="loaded" style="margin-left: 10px ;">Enter email of client, who you want to edit.</h3>
+   <form id=load [hidden]="loaded">  
+    <mat-form-field style="margin-left: 10px ;">
+    <mat-label>Email</mat-label>
+    <input id=email matInput required>
+    </mat-form-field>
+    <button class="button" (click)="getClient($event)"mat-raised-button>Submit</button>
+    </form>
+   <form [hidden]="!loaded" id=update>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Client</mat-label>
+        <input  id=client value={{client.clientName}} matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Email</mat-label>
+        <input id=email_new value={{client.email}} matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Address</mat-label>
+        <input id=address value={{client.address}} matInput required>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Phone Number</mat-label>
+        <input id=number value={{client.phoneNumber}} matInput required>
+    </mat-form-field><br>
+    <button class="button" (click)="editClient($event)"mat-raised-button>Edit</button>
+   </form>
+   

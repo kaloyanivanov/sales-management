@@ -1,0 +1,12 @@
+<h1 style="margin-left: 250px; margin-top: 100px; font-size:40px;">Sign in</h1>
+<form id=login>
+    <mat-form-field style="margin-left: 250px !important;">
+        <mat-label>Email</mat-label>
+        <input id=email matInput>
+    </mat-form-field><br>
+    <mat-form-field style="margin-left: 250px !important;">
+        <mat-label>Password</mat-label>
+        <input id=password  type="password" matInput>
+    </mat-form-field><br>
+<button class="button" (click)="userLogin($event)" mat-raised-button style="margin-left: 250px;">Login</button>
+</form>

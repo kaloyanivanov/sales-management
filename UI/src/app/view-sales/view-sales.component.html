@@ -1,0 +1,19 @@
+<table id=table>
+    <tr>
+        <th>Id</th>
+        <th>Client</th>
+        <th>Date</th>
+        <th>Sum</th>
+        <th>Product Id</th>
+        <th>Quantity Sold</th>
+    </tr>
+    <tr *ngFor="let sale of sales">
+        <td>{{sale.id}}</td>
+        <td>{{sale.clientName}}</td>
+        <td>{{sale.date}}</td>
+        <td>{{sale.sum}}</td>
+        <td>{{sale.productId}}</td>
+        <td>{{sale.quantitySold}}</td>
+    </tr>
+</table>
+<h1 style="margin-left: 10px; color: red;">{{message}}</h1>

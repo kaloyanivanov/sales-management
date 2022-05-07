@@ -1,0 +1,23 @@
+<section class="button-row">
+
+    <button  class="button" mat-raised-button [matMenuTriggerFor]="agent_menu">Client</button>
+    <mat-menu  #agent_menu="matMenu">
+      <button mat-menu-item routerLink="add">Add Client</button>
+      <button mat-menu-item routerLink="edit/client">Edit Client</button>
+      <button mat-menu-item routerLink="remove">Remove Client</button>
+      <button mat-menu-item routerLink="view">View Clients</button>
+    </mat-menu>
+
+    
+    <button  class="button" mat-raised-button [matMenuTriggerFor]="sale_menu">Sale</button>
+    <mat-menu  #sale_menu="matMenu">
+      <button mat-menu-item routerLink="add/sale">Add Sale</button>
+      <button mat-menu-item routerLink="edit/sale">Edit Sale</button>
+      <button mat-menu-item routerLink="remove/sale">Remove Sale</button>
+      <button mat-menu-item routerLink="sales">View Sales</button>
+    </mat-menu>
+    <button class="button" mat-raised-button routerLink="/">Logout</button>
+</section>
+<p>You are logged in as {{username}}</p>
+<router-outlet></router-outlet>
+

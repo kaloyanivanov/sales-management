@@ -1,0 +1,14 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 style="margin-left: 10px ;">Enter email and username of commercial agent, who you want to delete.</h3>
+<form id=remove>
+<mat-form-field style="margin-left: 10px ;">
+    <mat-label>Email</mat-label>
+    <input id=email matInput required>
+</mat-form-field>
+<mat-form-field style="margin-left: 10px ;">
+    <mat-label>Username</mat-label>
+    <input id=username matInput required>
+</mat-form-field>
+<button class="button" (click)="removeAgent($event)" mat-raised-button >Delete</button></form>
+

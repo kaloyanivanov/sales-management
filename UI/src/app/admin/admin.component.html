@@ -1,0 +1,22 @@
+<section class="button-row">
+    <button  class="button" mat-raised-button [matMenuTriggerFor]="agent_menu">Commercial agent</button>
+    <mat-menu  #agent_menu="matMenu">
+      <button mat-menu-item routerLink="view/agents">View Commercial Agents</button>
+      <button mat-menu-item routerLink="add/agent">Add Commercial Agent</button>
+      <button mat-menu-item routerLink="edit/agent">Edit Commercial Agent</button>
+      <button mat-menu-item routerLink="remove/agent">Remove Commercial Agent</button>
+    </mat-menu>
+    <button  class="button" mat-raised-button [matMenuTriggerFor]="product_menu">Product</button>
+    <mat-menu  #product_menu="matMenu">
+      <button mat-menu-item routerLink="view/products">View Products</button>
+      <button mat-menu-item routerLink="add/product">Add Product</button>
+      <button mat-menu-item routerLink="edit/product">Edit Product</button>
+      <button mat-menu-item routerLink="remove/product">Remove Product</button>
+    </mat-menu> 
+    <a routerLink="sales"><button class="button" mat-raised-button>View Sales</button></a>
+    <a routerLink="/"><button class="button" mat-raised-button>Logout</button></a>  
+</section>
+<p>You are logged in as {{username}}</p>
+
+
+<router-outlet></router-outlet>

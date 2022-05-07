@@ -1,0 +1,40 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 [hidden]="loaded" style="margin-left: 10px ;">Enter username and email, of commercial agent who you want to edit.</h3>
+   <form id=enter [hidden]="loaded">  
+    <mat-form-field style="margin-left: 10px ;">
+    <mat-label>Username</mat-label>
+    <input id=username matInput required>
+    </mat-form-field>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Email</mat-label>
+        <input id=email matInput required>
+        </mat-form-field>
+    <button class="button"(click)="getAgent($event)" mat-raised-button>Submit</button>
+    </form>
+
+    <h3 [hidden]="!loaded" style="margin-left: 10px ;">Edit information of commercial agent.</h3>
+    <form [hidden]="!loaded" id=update>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>First Name</mat-label>
+            <input  id=firstName value={{agent.firstName}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Last Name</mat-label>
+            <input  id=lastName value={{agent.lastName}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Username</mat-label>
+            <input  id=username value={{agent.username}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Email</mat-label>
+            <input id=email value={{agent.email}} matInput required>
+        </mat-form-field><br>
+        <mat-form-field style="margin-left: 10px ;">
+            <mat-label>Password</mat-label>
+            <input id=password value={{agent.password}} matInput required>
+        </mat-form-field><br>
+        <button class="button" (click)="editAgent($event)" mat-raised-button>Update</button>
+        
+       </form>

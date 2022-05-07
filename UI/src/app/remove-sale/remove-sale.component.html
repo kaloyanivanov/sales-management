@@ -1,0 +1,10 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3  style="margin-left: 10px ;">Enter sale id, of sale which you want to delete.</h3>
+   <form id=remove>  
+    <mat-form-field style="margin-left: 10px ;">
+    <mat-label>Id</mat-label>
+    <input id=id matInput required>
+    </mat-form-field>
+    <button class="button" (click)="removeSale($event)"mat-raised-button>Delete</button>
+    </form>

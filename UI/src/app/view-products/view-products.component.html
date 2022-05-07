@@ -1,0 +1,17 @@
+<table id=table>
+    <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.type}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.availability}}</td>
+        <td>{{product.quantity}}</td>
+    </tr>
+</table>
+<h1 style="margin-left: 10px; color: red;">{{message}}</h1>

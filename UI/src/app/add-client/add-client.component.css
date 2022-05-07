@@ -1,0 +1,15 @@
+.button {
+    margin-left: 45px ;
+    transform: scale(0.95);
+}
+.green{
+    margin-left: 10px ;
+    color: green;
+
+}
+
+.red{
+    margin-left: 10px ;
+    color: red;
+
+}

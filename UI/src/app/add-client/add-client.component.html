@@ -1,0 +1,22 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 style="margin-left: 10px ;">Enter information for client, who you want to add.</h3>
+<form id=add>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Client</mat-label>
+     <input  id=client matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Email</mat-label>
+     <input id=email matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Address</mat-label>
+     <input id=address matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Phone Number</mat-label>
+     <input id=phoneNumber matInput required>
+ </mat-form-field><br>
+ <button class="button" (click)="addClient($event)" mat-raised-button>Add</button>
+</form>

@@ -1,0 +1,27 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 class=txt style="margin-left: 45px ;" >Enter information for commercial agent, who you want to add.</h3>
+<form id=add>
+ <mat-form-field style="margin-left: 45px ;">
+     <mat-label>First Name</mat-label>
+     <input  id=firstName matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 45px ;">
+     <mat-label>Last Name</mat-label>
+     <input  id=lastName matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 45px ;">
+     <mat-label>Username</mat-label>
+     <input  id=username matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 45px ;">
+     <mat-label>Email</mat-label>
+     <input id=email matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 45px ;">
+     <mat-label>Password</mat-label>
+     <input id=password matInput required>
+ </mat-form-field><br>
+ <button class="button"(click)="addAgent($event)" mat-raised-button>Add</button>
+ 
+</form>

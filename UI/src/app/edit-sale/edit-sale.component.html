@@ -1,0 +1,38 @@
+<br>
+<h1 class={{colour}}>{{message}}</h1>
+<h3 [hidden]="loaded" style="margin-left: 10px ;">Enter sale id, of sale which you want to edit.</h3>
+   <form id=enter [hidden]="loaded">  
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Id</mat-label>
+        <input id=id matInput required>
+        </mat-form-field>
+    <button class="button" (click)="getSale($event)"mat-raised-button>Submit</button>
+    </form>
+<h3 [hidden]="!loaded" style="margin-left: 10px ;">Edit information of sale.</h3>
+<form  [hidden]="!loaded" id=update>
+    <mat-form-field style="margin-left: 10px ;">
+        <mat-label>Id</mat-label>
+        <input id=sale_id value={{sale.id}} matInput required>
+    </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Client</mat-label>
+     <input id=customer value={{sale.clientName}} matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Date</mat-label>
+     <input id=date value={{sale.date}} matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Sum</mat-label>
+     <input id=sum value={{sale.sum}} matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Product Id</mat-label>
+     <input id=product_id value={{sale.productId}} matInput required>
+ </mat-form-field><br>
+ <mat-form-field style="margin-left: 10px ;">
+     <mat-label>Quantity Sold</mat-label>
+     <input id=quantity value={{sale.quantitySold}} matInput required>
+ </mat-form-field><br>
+ <button class="button" (click)="editSale($event)" mat-raised-button>Edit</button>
+</form>

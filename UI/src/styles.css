@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-typography{
+    background-image: url('C:\Users\Kaloian\business\src\background.jpg');
+
+  }
+
+.button{
+  color: black;
+  background-color: #d67f37;
+}
+h3{
+  font-size:18px !important;
+  margin-left: 45px !important;
+}
+
+mat-form-field{
+  margin-left: 45px !important;
+
+}
+
+mat-checkbox{
+
+  margin-left: 45px !important;
+
+}
+
+.mat-focused .mat-form-field-label {
+  color: black !important;
+ }
+
+.mat-form-field-underline {
+  background-color:black !important;
+} 
+
+.mat-form-field-ripple {
+ background-color: black !important;
+}
